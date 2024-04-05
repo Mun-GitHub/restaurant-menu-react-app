@@ -5,7 +5,7 @@ import {
   setHeaderData,
   setHomePageData,
   // COMMENT: Uncomment below line
-  // setMenuPageData,
+  setMenuPageData,
 } from "../reducer";
 import { initializeContentstackSdk } from "../sdk/utils";
 import * as Utils from "@contentstack/utils";
@@ -92,19 +92,19 @@ export const fetchHomePageData = async (
 
 // COMMENT: Uncomment below code
 
-// export const fetchMenuPageData = async (
-//   dispatch: Dispatch<any>,
-//   setLoading: (status: boolean) => void
-// ): Promise<void> => {
-//   const data: any = await getEntryByUrl({
-//     contentTypeUid: CONTENT_TYPES.PAGE,
-//     entryUrl: "/menu",
-//     referenceFieldPath: ["sections.menu.course.dishes"],
-//     jsonRtePath: undefined,
-//   });
-//   dispatch(setMenuPageData(data[0].sections[0].menu.course));
-//   setLoading(false);
-// };
+ export const fetchMenuPageData = async (
+   dispatch: Dispatch<any>,
+   setLoading: (status: boolean) => void
+ ): Promise<void> => {
+   const data: any = await getEntryByUrl({
+     contentTypeUid: CONTENT_TYPES.PAGE,
+     entryUrl: "/menu",
+     referenceFieldPath: ["sections.menu.course.dishes"],
+     jsonRtePath: undefined,
+   });
+   dispatch(setMenuPageData(data[0].sections[0].menu.course));
+   setLoading(false);
+ };
 
 export const fetchInitialData = async (
   dispatch: Dispatch<any>,

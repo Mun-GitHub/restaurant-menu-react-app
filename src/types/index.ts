@@ -32,15 +32,15 @@ export type TLink = {
 
 // COMMENT: Uncomment below lines
 
-// export type TDishes = {
-//   uid: string;
-//   image: {
-//     url: string;
-//   };
-//   title: string;
-// };
+export type TDishes = {
+  uid: string;
+  image: {
+     url: string;
+   };
+   title: string;
+ };
 
-// export type TMenu = {
-//   course_name: string;
-//   dishes: TDishes[];
-// };
+ export type TMenu = {
+  course_name: string;
+   dishes: TDishes[];
+ };

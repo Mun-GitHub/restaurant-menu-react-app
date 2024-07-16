@@ -1,13 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // COMMENT: Add TMenu in below import statement
-import { TFooterData, THeaderData, THomePageData, TMenu } from "../types";
+import { TFooterData, THeaderData, THomePageData } from "../types";
 
 interface AppState {
   headerData: THeaderData;
   footerData: TFooterData;
   homePageData: THomePageData;
   // COMMENT: Uncomment below line
-  menuPageData: TMenu[];
+  // menuPageData: TMenu[];
 }
 
 const initialState: AppState = {
@@ -26,36 +26,59 @@ const initialState: AppState = {
     },
   },
   footerData: {
+    title: "",
+    navigation_links: {
+      title: "",
+      link: [
+        {
+          href: "",
+          title: "",
+        },
+      ],
+    },
+    information_section: {
+      logo: {
+        url: "",
+      },
+      descrption: "",
+      timings: "",
+      holiday: "",
+    },
     copyright: "",
   },
   homePageData: {
     sections: [
       {
-        home_banner: {
-          banner: [
-            {
+        home: {
+          hero_section: {
+            banner: {
               url: "",
             },
-          ],
+            heading: "",
+            description: "",
+            primary_cta: "",
+          },
         },
       },
     ],
   },
   // COMMENT: Uncomment below lines
-  menuPageData: [
-   {
-      course_name: "",
-       dishes: [
-         {
-          uid: "",
-          image: {
-            url: "",
-           },
-           title: "",
-         },
-       ],
-     },
-   ],
+  // menuPageData: [
+  //   {
+  //     course_name: "",
+  //     dishes: [
+  //       {
+  //         uid: "",
+  //         image: {
+  //           url: "",
+  //         },
+  //         title: "",
+  //         description: "",
+  //         price: 0,
+  //       },
+  //     ],
+  //   },
+  // ],
 };
 
 const mainSlice = createSlice({
@@ -72,9 +95,9 @@ const mainSlice = createSlice({
       state.homePageData = action.payload;
     },
     // COMMENT: Uncomment below lines
-    setMenuPageData: (state, action: PayloadAction<TMenu[]>) => {
-      state.menuPageData = action.payload;
-    },
+    // setMenuPageData: (state, action: PayloadAction<TMenu[]>) => {
+    //   state.menuPageData = action.payload;
+    // },
   },
 });
 
@@ -83,7 +106,7 @@ export const {
   setFooterData,
   setHomePageData,
   // COMMENT: Uncomment below line
-  setMenuPageData,
+  // setMenuPageData,
 } = mainSlice.actions;
 
 export default mainSlice.reducer;

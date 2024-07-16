@@ -12,15 +12,36 @@ export type THeaderData = {
 };
 
 export type TFooterData = {
-  copyright: string;
+  title: string;
+
+  navigation_links?: {
+    title?: string;
+    link?: TLink[];
+  };
+
+  information_section?: {
+    logo?: {
+      url?: string;
+    };
+    descrption?: string;
+    timings?: string;
+    holiday?: string;
+  };
+
+  copyright?: string;
 };
 
 export type THomePageData = {
   sections: {
-    home_banner: {
-      banner: {
-        url: string;
-      }[];
+    home: {
+      hero_section?: {
+        banner?: {
+          url: string;
+        };
+        heading?: string;
+        description?: string;
+        primary_cta?: string;
+      };
     };
   }[];
 };
@@ -32,15 +53,17 @@ export type TLink = {
 
 // COMMENT: Uncomment below lines
 
-export type TDishes = {
-  uid: string;
-  image: {
-     url: string;
-   };
-   title: string;
- };
+// export type TDishes = {
+//   uid: string;
+//   image: {
+//     url: string;
+//   };
+//   title: string;
+//   description: string;
+//   price: number;
+// };
 
- export type TMenu = {
-  course_name: string;
-   dishes: TDishes[];
- };
+// export type TMenu = {
+//   course_name: string;
+//   dishes: TDishes[];
+// };

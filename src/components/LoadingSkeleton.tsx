@@ -1,7 +1,7 @@
 import React from "react";
 
 export const LoadingSkeleton = () => {
-  const numPlaceholders = 5;
+  const numPlaceholders = 3;
 
   const placeholders = Array.from({ length: numPlaceholders }, (_, index) => (
     <span key={index} className="loading-placeholder"></span>

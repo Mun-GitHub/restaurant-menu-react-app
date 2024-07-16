@@ -1,4 +1,4 @@
-# React Contentstack Starter App
+# Contentstack getting started React App
 
 ## Description
 
@@ -9,13 +9,13 @@ This is a React starter app that integrates with Contentstack's Content Delivery
 1. Clone the repository:
 
    ```
-   git clone https://github.com/praveen-mohan-cs/restaurant-menu-react-app.git
+   git clone https://github.com/contentstack/contentstack-getting-started-react-app.git
    ```
 
 2. Navigate to the project directory:
 
    ```
-   cd restaurant-menu-react-app
+   cd contentstack-getting-started-react-app
    ```
 
 3. Install dependencies:
@@ -27,9 +27,10 @@ This is a React starter app that integrates with Contentstack's Content Delivery
 4. Rename `.env.sample` as `.env` file in the root directory and add your Contentstack API keys:
 
    ```
-   REACT_APP_CONTENTSTACK_API_KEY=your_api_key
-   REACT_APP_CONTENTSTACK_DELIVERY_TOKEN=your_delivery_token
-   REACT_APP_CONTENTSTACK_ENVIRONMENT=your_environment_name
+   REACT_APP_CONTENTSTACK_API_KEY=YOUR_STACK_API_KEY
+   REACT_APP_CONTENTSTACK_DELIVERY_TOKEN=YOUR_DELIVERY_TOKEN
+   REACT_APP_CONTENTSTACK_ENVIRONMENT=YOUR_ENVIRONMENT
+   REACT_APP_CONTENTSTACK_REGION=YOUR_STACK_REGION
    ```
 
 5. Run the development server:
@@ -41,7 +42,15 @@ This is a React starter app that integrates with Contentstack's Content Delivery
 
 To configure the app with your Contentstack account:
 
-- Replace `your_api_key`, `your_delivery_token`, and `your_environment_name` in the `.env` file with your Contentstack API key, delivery token, and environment name, respectively.
+- Replace `YOUR_STACK_API_KEY`, `YOUR_DELIVERY_TOKEN`, `YOUR_ENVIRONMENT` and `YOUR_STACK_REGION` in the `.env` file with your Contentstack API key, delivery token, environment name and region respectively.
+
+**Supported Regions:**
+
+- **AWS North America:** `US`
+- **AWS Europe:** `EU`
+- **Azure North America:** `AZURE_NA`
+- **Azure Europe:** `AZURE_EU`
+- **GCP North America:** `GCP_NA`
 
 ## Usage
 
@@ -60,4 +69,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions or feedback, feel free to [open an issue](https://github.com/praveen-mohan-cs/restaurant-menu-react-app/issues).
+For questions or feedback, feel free to [open an issue](https://github.com/contentstack/contentstack-getting-started-react-app/issues).

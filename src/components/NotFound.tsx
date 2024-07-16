@@ -6,6 +6,7 @@ export const NotFound: React.FC = () => {
         width: "100%",
         justifyContent: "center",
         alignItems: "center",
+        height: "100vh",
       }}
     >
       404! Page not found
